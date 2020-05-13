@@ -814,10 +814,12 @@ main .vertical_sections .conversation .message_popups .macros_popup .macros_bott
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder {
   text-align: left;
-  padding: 15px 0;
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder button {
-  background-color: #572c5f;
+  background-color: white;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder button img {
+  width: 34px;
 }
 main .vertical_sections .conversation .message_popups .message_popup {
   max-width: 600px;

@@ -846,9 +846,11 @@ main {
 
                         .button_holder {
                             text-align: left;
-                            padding: 15px 0;
                             button {
-                                background-color: #572c5f;
+                                background-color: white;
+                                img{
+                                    width:34px;
+                                }
                             }
                         }
                     }
