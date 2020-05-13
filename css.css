@@ -38,6 +38,7 @@ html {
   text-transform: capitalize;
   padding: 15px 20px;
   border-radius: 5px;
+  font-size: 14px;
 }
 .send_button i {
   margin-left: 5px;
@@ -210,10 +211,12 @@ main .vertical_sections .inbox .messages .message {
   font-weight: lighter;
   text-transform: capitalize;
   cursor: pointer;
+  padding: 10px 0;
 }
 main .vertical_sections .inbox .messages .message .top {
   display: flex;
   padding: 15px 20px;
+  padding-bottom: 5px;
 }
 main .vertical_sections .inbox .messages .message .top .fa-eye-slash {
   color: #ffc658;
@@ -231,6 +234,7 @@ main .vertical_sections .inbox .messages .message .content {
   font-size: 14px;
   margin: 0;
   padding: 10px 20px;
+  padding-top: 0;
 }
 main .vertical_sections .inbox .messages .message .content .fa-users {
   margin-right: 7px;
@@ -298,6 +302,64 @@ main .vertical_sections .conversation .send_message {
   width: 40%;
   margin: auto;
 }
+main .vertical_sections .conversation .send_message .drop_down {
+  text-align: left;
+  font-size: 14px;
+}
+main .vertical_sections .conversation .send_message .drop_down .selected {
+  background-color: white;
+  border: 1px solid rgba(192, 192, 192, 0.438);
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+main .vertical_sections .conversation .send_message .drop_down .selected i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+main .vertical_sections .conversation .send_message .drop_down .focused {
+  box-shadow: 0 0 2px 5px #9063ceb9;
+}
+main .vertical_sections .conversation .send_message .drop_down .options {
+  visibility: hidden;
+  opacity: 0;
+  top: 10px;
+  position: relative;
+  transition: all 0.2s;
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  max-height: 235px;
+  overflow-y: scroll;
+  bottom: 50px;
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 1px 0;
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option:nth-child(1) {
+  border-bottom: 1px solid rgba(192, 192, 192, 0.356);
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner .selected_option {
+  background-color: #5c4280;
+  color: white;
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option:hover {
+  background-color: #5c4280;
+  color: white;
+}
 main .vertical_sections .conversation .send_message .send_options {
   padding: 20px 0;
   display: flex;
@@ -321,16 +383,19 @@ main .vertical_sections .conversation .send_message .send_options .icons .m {
   font-size: 30px;
   vertical-align: 5px;
 }
-@media (max-width: 525px) {
-  main .vertical_sections .conversation .send_message .send_options .icons {
-    font-size: 25px;
-    margin-top: 10px;
+@media (max-width: 635px) {
+  main .vertical_sections .conversation .send_message .send_options {
+    display: block;
   }
-  main .vertical_sections .conversation .send_message .send_options .icons .m {
-    font-size: 23px;
-    height: 30px;
-    width: 30px;
-    vertical-align: 1px;
+  main .vertical_sections .conversation .send_message .send_options .icons {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  main .vertical_sections .conversation .send_message .send_options .icons i, main .vertical_sections .conversation .send_message .send_options .icons .m {
+    margin: auto;
   }
 }
 main .vertical_sections .conversation .send_message input {
@@ -464,12 +529,21 @@ main .vertical_sections .conversation .texts .text:nth-child(4) .content {
 }
 main .vertical_sections .conversation .buttons {
   display: flex;
+  width: 40%;
 }
 main .vertical_sections .conversation .buttons button {
   margin: 0 5px;
 }
+@media (max-width: 635px) {
+  main .vertical_sections .conversation .buttons {
+    width: 100%;
+    max-width: 420px;
+    margin: 10px auto;
+  }
+}
 main .vertical_sections .conversation .recepients {
   position: relative;
+  width: 100%;
 }
 main .vertical_sections .conversation .recepients select {
   padding: 15px;
@@ -712,47 +786,6 @@ main .vertical_sections .conversation .message_popups .macros_popup .macros_bott
   background-color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down {
-  text-align: left;
-  font-size: 14px;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .selected {
-  background-color: #5c4280;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  color: white;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .selected i {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 18px;
-  transition: transform 0.2s;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options {
-  transform: scaleY(0);
-  position: relative;
-  transition: transform 0.2s;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options .options_inner {
-  position: absolute;
-  background-color: white;
-  width: 100%;
-  max-height: 235px;
-  overflow-y: scroll;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options .options_inner .option {
-  padding: 10px;
-  cursor: pointer;
-  transition: all 0.2s;
-  margin: 1px 0;
-}
-main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options .options_inner .option:hover {
-  background-color: #5c4280;
-  color: white;
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder {
   text-align: left;

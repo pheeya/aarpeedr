@@ -90,47 +90,50 @@ function openMacros() {
 }
 
 
-////custom drop down ***REMOVED FOR NOW****
+////custom drop down 
 
-// var selected = document.getElementById('selected');
-// var arrow = document.getElementById('arrow');
-// var options = document.getElementsByClassName("options")[0];
-// var options_list = document.getElementsByClassName("option");
-// var opened = false;
-// var selected_list = [];
-// selected.onclick = function () {
-//     if (!opened) {
-//         options.style.overflow = "unset";
-//         options.style.transform = "scaleY(1)"
-//         opened = true;
-//         arrow.style.transform = "rotate(180deg)";
+var selected = document.getElementById('selected');
+var arrow = document.getElementById('arrow');
+var options = document.getElementsByClassName("options")[0];
+var options_list = document.getElementsByClassName("option");
+var opened = false;
+var selected_list = [];
+selected.onclick = function () {
+    if (!opened) {
+        options.style.top = "0"
+        options.style.visibility = "visible"
+        options.style.opacity = "1"
+        opened = true;
+        selected.classList.add("focused")
+        arrow.style.transform = "rotate(180deg)";
 
-//     }
-//     else {
-//         options.style.transform = "scaleY(0)"
-//         opened = false;
-//         arrow.style.transform = "rotate(0deg)"
-//     }
-// }
+    }
+    else {
+        options.style.top = "10px"
+        options.style.visibility = "hidden"
+        options.style.opacity = "0"
+        opened = false;
+        selected.classList.remove("focused")
+        arrow.style.transform = "rotate(0deg)"
+    }
+}
 
-// for (let i = 0; i < options_list.length; i++) {
-//     options_list[i].onclick = function () {
-//         if (!selected_list.includes(this.innerHTML)) {
-//             selected_list.push(this.innerHTML);
-//             this.style.backgroundColor = "#5c4280"
-//             this.style.color = "white"
-//             console.log(selected_list)
-//         }
-//         else {
-//             var index = selected_list.indexOf(this.innerHTML);
-//             selected_list.splice(index, 1);
-//             this.style.backgroundColor = "white"
-//             this.style.color = "black"
-//             console.log(selected_list);
-//         }
-//         document.getElementById("number_of_selected").innerHTML = selected_list.length;
-//     }
-// }
+for (let i = 0; i < options_list.length; i++) {
+    options_list[i].onclick = function () {
+        if (!selected_list.includes(this.innerHTML)) {
+            selected_list.push(this.innerHTML);
+            this.classList.add("selected_option")
+            console.log(selected_list)
+        }
+        else {
+            var index = selected_list.indexOf(this.innerHTML);
+            selected_list.splice(index, 1);
+            this.classList.remove("selected_option")
+
+        }
+        document.getElementById("number_of_selected").innerHTML = selected_list.length;
+    }
+}
 
 
 // search functionality for drop down

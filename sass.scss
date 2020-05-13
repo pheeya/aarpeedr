@@ -33,6 +33,7 @@ html {
     text-transform: capitalize;
     padding: 15px 20px;
     border-radius: 5px;
+    font-size: 14px;
     i {
         margin-left: 5px;
     }
@@ -205,9 +206,11 @@ main {
                     font-weight: lighter;
                     text-transform: capitalize;
                     cursor: pointer;
+                    padding:10px 0;
                     .top {
                         display: flex;
                         padding: 15px 20px;
+                        padding-bottom: 5px;
                         .fa-eye-slash {
                             color: #ffc658;
                         }
@@ -225,6 +228,7 @@ main {
                         font-size: 14px;
                         margin: 0;
                         padding: 10px 20px;
+                        padding-top: 0;
                         .fa-users {
                             margin-right: 7px;
                         }
@@ -295,6 +299,67 @@ main {
                 left: 0;
                 width: 40%;
                 margin: auto;
+                .drop_down {
+                    text-align: left;
+                    font-size: 14px;
+                    .selected {
+                        background-color: white;
+                        border: 1px solid rgba(192, 192, 192, 0.438);
+                        // background-color: #572C5F;
+                        // color: white;
+                        padding: 15px;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        transition: box-shadow .2s;
+                        i {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            font-size: 18px;
+                            transition: transform 0.2s;
+                        }
+                    }
+                    .focused{
+                        box-shadow:0 0 2px 5px #9063ceb9;
+                    }
+                    .options {
+                        visibility: hidden;
+                        opacity:0;
+                        top: 10px;
+                        position: relative;
+                        transition: all 0.2s;
+                       
+                        .options_inner {
+                        margin-bottom:5px;
+                        border-radius: 5px;
+                            position: absolute;
+                            background-color: white;
+                            width: 100%;
+                            max-height: 235px;
+                            overflow-y: scroll;
+                            bottom: 50px;
+                            .option {
+                                padding: 10px;
+                                cursor: pointer;
+                                transition: all 0.2s;
+                                margin: 1px 0;
+                            }
+                            .option:nth-child(1){
+                                border-bottom:1px solid rgba(192, 192, 192, 0.356);
+                            }
+                            .selected_option {
+                                background-color: #5c4280;
+                                color: white;
+                            }
+                            .option:hover {
+                                background-color: #5c4280;
+                                color: white;
+                            }
+                        }
+                    }
+                }
                 .send_options {
                     padding: 20px 0;
                     display: flex;
@@ -318,15 +383,19 @@ main {
                             vertical-align: 5px;
                         }
                     }
-                    @media (max-width: 525px) {
-                        .icons {
-                            font-size: 25px;
-                            margin-top: 10px;
-                            .m {
-                                font-size: 23px;
-                                height: 30px;
-                                width: 30px;
-                                vertical-align: 1px;
+                
+                }
+                @media(max-width:635px){
+                    .send_options{
+                        display:block;
+                        .icons{
+                            width:100%;
+                            max-width: 420px;
+                            margin:auto;
+                            display:flex;
+                            margin-bottom:20px;
+                            i,.m{
+                                margin:auto;
                             }
                         }
                     }
@@ -477,25 +546,34 @@ main {
             }
             .buttons {
                 display: flex;
+                width: 40%;
                 button {
                     margin: 0 5px;
                 }
             }
+            @media(max-width:635px){
+              .buttons{
+                width:100%;
+                max-width: 420px;
+                margin:10px auto;
+              }
+            }
             .recepients {
                 position: relative;
-                select{
-                    padding:15px;
-                    border:1px solid silver;
-                    border-radius:5px;
+                width: 100%;
+                select {
+                    padding: 15px;
+                    border: 1px solid silver;
+                    border-radius: 5px;
                     cursor: pointer;
-                    transition:box-shadow .2s;
+                    transition: box-shadow 0.2s;
                 }
-                option{
-                    padding:10px 5px;
+                option {
+                    padding: 10px 5px;
                     cursor: pointer;
                 }
-                select:focus{
-                    outline:none;
+                select:focus {
+                    outline: none;
                     box-shadow: 0 0 2px 3px #a24ace6c;
                 }
                 .fas {
@@ -739,47 +817,7 @@ main {
                         background-color: white;
                         border-bottom-left-radius: 5px;
                         border-bottom-right-radius: 5px;
-                        .drop_down {
-                            text-align: left;
-                            font-size: 14px;
-                            .selected {
-                                background-color: #5c4280;
-                                padding: 10px;
-                                display: flex;
-                                justify-content: space-between;
-                                cursor: pointer;
-                                color: white;
-                                i {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    font-size: 18px;
-                                    transition: transform 0.2s;
-                                }
-                            }
-                            .options {
-                                transform: scaleY(0);
-                                position: relative;
-                                transition: transform 0.2s;
-                                .options_inner {
-                                    position: absolute;
-                                    background-color: white;
-                                    width: 100%;
-                                    max-height: 235px;
-                                    overflow-y: scroll;
-                                    .option {
-                                        padding: 10px;
-                                        cursor: pointer;
-                                        transition: all 0.2s;
-                                        margin: 1px 0;
-                                    }
-                                    .option:hover {
-                                        background-color: #5c4280;
-                                        color: white;
-                                    }
-                                }
-                            }
-                        }
+
                         .button_holder {
                             text-align: left;
                             padding: 15px 0;
