@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/62ae376429.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav_desktop nav">
+            <div class="logo nav_item"><img src="Media/Logo_White.png"></div>
+            <div class="nav_items">
+                <div class="nav_item name">
+                    <div>shay rodriguez </div>
+                    <div class="img"><img src="Media/patient.jpg" alt=""></div>
+                </div>
+                <div class="vertical_divider"></div>
+                <div class="nav_item bell"><i class="far fa-bell"></i></div>
+            </div>
+        </div>
+        <div class="nav_mobile">
+            <button id="inbox" class="nav_button" onclick="openInbox()">inbox</button>
+            <button id="patient_info" class="nav_button" onclick="openInfo()">Patient Info</button>
+        </div>
+    </nav>
+    <main>
+        <div class="vertical_sections">
+            <div class="vertical_section inbox">
+                <div class="top">
+                    <i class="fas fa-times" onclick="closeInbox()"></i>
+                    <div class="search"> <input type="text" placeholder="Search Patient"><i class="fas fa-search"></i>
+                    </div>
+                    <div class="titles">
+                        <div class="title">Patient/Proxy</div>
+                        <div class="title">Plan</div>
+                        <div class="title">EOD</div>
+                        <div class="title">Alerts <i class="far fa-bell"></i></div>
+                    </div>
+                </div>
+                <div class="messages">
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-exclamation-circle alert"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">jane hall</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-exclamation-circle alert"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob wall
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message active_message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye"></i>
+                                <div class="title">eric castillo</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                    <div class="message">
+                        <div class="top">
+                            <div class="item"> <i class="far fa-eye-slash"></i>
+                                <div class="title">kira woods</div>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                            <div class="item">
+                                <i class="far fa-envelope alert hidden"></i>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <i class="fas fa-users"></i> bob woods, jennifer woods, daisy ramirez...
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                </div>
+            </div>
+            <div class="vertical_section conversation">
+                <div class="top">
+                    <div class="title">
+                        messages with
+                    </div>
+                    <div class="names">
+                        <div class="name">
+                            <div class="circle"></div> <strong>eric castillo</strong>
+                        </div>
+                        <div class="name">
+                            <div class="circle"></div>michael carrillo
+                        </div>
+                        <div class="name">
+                            <div class="circle"></div>crista carillo
+                        </div>
+                    </div>
+                    <div class="horizontal_divider"></div>
+                </div>
+                <div class="texts">
+                    <div class="text">
+                        <div class="top">
+                            <div class="name">
+                                <div class="circle"></div>eric castillo
+                            </div>
+                            <div class="time_stamp">
+                                29-Apr-2020 06:50 PM
+                            </div>
+                        </div>
+                        <div class="content">
+                            I'm okay...
+                        </div>
+                        <div class="bottom">
+                            <div class="seen">
+                                <i class="far fa-eye"></i>
+                                Message-Seen
+                            </div>
+                            <div class="seen not_seen">
+                                <i class="far fa-eye-slash"></i>
+                                Message-Not-Seen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="top">
+                            <div class="name">
+                                <div class="circle"></div>Michael Carrillo
+                            </div>
+                            <div class="time_stamp">
+                                29-Apr-2020 06:55 PM
+                            </div>
+                        </div>
+                        <div class="content">
+                            Good to Hear
+                        </div>
+                        <div class="bottom">
+                            <div class="seen">
+                                <i class="far fa-eye"></i>
+                                Message-Seen
+                            </div>
+                            <div class="seen not_seen">
+                                <i class="far fa-eye-slash"></i>
+                                Message-Not-Seen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="top">
+                            <div class="name">
+                                <div class="circle"></div>Crista Carrillo
+                            </div>
+                            <div class="time_stamp">
+                                29-Apr-2020 06:59 PM
+                            </div>
+                        </div>
+                        <div class="content">
+                            Shay, how is his progress
+                        </div>
+                        <div class="bottom">
+                            <div class="seen">
+                                <i class="far fa-eye"></i>
+                                Message-Seen
+                            </div>
+                            <div class="seen not_seen">
+                                <i class="far fa-eye-slash"></i>
+                                Message-Not-Seen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text my_text">
+                        <div class="top">
+                            <div class="name">
+                                <div class="circle"></div>Shay Rodriquez
+                            </div>
+                            <div class="time_stamp">
+                                29-Apr-2020 06:59 PM
+                            </div>
+                        </div>
+                        <div class="content">
+                            He is improving. Here is a video.
+                            <img src="Media/health_status.jpg" alt="">
+                        </div>
+                        <div class="bottom">
+                            <div class="seen">
+                                <i class="far fa-eye"></i>
+                                Message-Seen
+                            </div>
+                            <div class="seen not_seen">
+                                <i class="far fa-eye-slash"></i>
+                                Message-Not-Seen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="top">
+                            <div class="name">
+                                <div class="circle"></div>Crista Carrillo
+                            </div>
+                            <div class="time_stamp">
+                                29-Apr-2020 06:59 PM
+                            </div>
+                        </div>
+                        <div class="content">
+                            will visit tomorrow
+                        </div>
+                        <div class="bottom">
+                            <div class="seen">
+                                <i class="far fa-eye"></i>
+                                Message-Seen
+                            </div>
+                            <div class="seen not_seen">
+                                <i class="far fa-eye-slash"></i>
+                                Message-Not-Seen
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message_popups" id="message_popups1">
+                        <div class="message_popup popup">
+                            <div class="message_popup_top">
+                                <div class="message_popup_title">
+                                    <div>photo</div>
+                                </div>
+                                <div> <i class="fas fa-times" onclick="closeAttachPicture()"></i></div>
+                            </div>
+                            <div class="message_popup_body">
+                                <img src="Media/health_status.jpg" alt="">
+                            </div>
+                            <div class="message_popup_bottom">
+                                <div><button class="take_picture">take picture</button></div>
+                                <div><button class="send_button">send</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message_popups" id="message_popups2">
+                        <div class="message_popup popup">
+                            <div class="message_popup_top">
+                                <div class="message_popup_title">
+                                    <div>video</div>
+                                </div>
+                                <div> <i class="fas fa-times" onclick="closeAttachVideo()"></i></div>
+                            </div>
+                            <div class="message_popup_body">
+                                <img src="Media/health_status.jpg" alt="">
+                            </div>
+                            <div class="message_popup_bottom">
+                                <div><button class="take_picture">record</button>
+                                    <button class="send_button">stop</button>
+                                </div>
+                                <div><button class="send_button">send</button></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="message_popups" id="message_popups3">
+                        <div class="macros_popup">
+                            <div class="macros_top">
+                                <div class="macros_popup_title">quick replies</div>
+                                <div class="search"><input type="text" placeholder="Search Macros" id="search_macros"
+                                        onkeyup="filterFunction()"></div>
+                                <div><i class="fas fa-times" onclick="closeMacros()"></i></div>
+                            </div>
+                            <div class="macros_body">
+                                <div class="tables_holder">
+                                    <table>
+                                        <tr>
+                                            <th>Macro
+
+
+                                            </th>
+
+                                            <th>Description</th>
+                                        </tr>
+                                    </table>
+
+
+                                    <div class="bottom_table_holder">
+                                        <table>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                            <tr>
+                                                <td class="divider_holder">
+                                                    <div class="horizontal_divider"></div>
+                                                </td>
+                                                <td class="divider_holder">
+                                                    <div class="horizontal_divider"></div>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="macro">
+                                                <td>I'm busy</td>
+                                                <td>Description1</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I'll be there soon</td>
+                                                <td>Description2</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I'll call you back</td>
+                                                <td>Description2</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I won't call you back</td>
+                                                <td>Description2</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I'm busy</td>
+                                                <td>Description1</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I'll be there soon</td>
+                                                <td>Description2</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I'll call you back</td>
+                                                <td>Description2</td>
+                                            </tr>
+                                            <tr class="macro">
+                                                <td>I won't call you back</td>
+                                                <td>Description2</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="macros_bottom">
+                                <!-- <div class="drop_down">
+                                    <div class="selected" id="selected">
+                                        <div id="text">Selected (<span id="number_of_selected">0</span>)</div> <i
+                                            id="arrow" class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="options">
+                                        <div class="options_inner">
+                                            <div class="option">Country</div>
+                                            <div class="option">Country1</div>
+                                            <div class="option">Country2</div>
+                                            <div class="option">Country3</div>
+                                            <div class="option">Country4</div>
+                                            <div class="option">Country5</div>
+                                            <div class="option">Country6</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="button_holder"><button class="send_button">send</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="send_message">
+                    <input type="text">
+                    <div class="send_options">
+                        <div class="icons">
+                            <i class="fas fa-paperclip" id="pin_message"></i>
+                            <i class="fas fa-camera" id="attach_picture" onclick="openAttachPicture()"></i>
+                            <i class="fas fa-video" id="attach_ideo" onclick="openAttachVideo()"></i>
+                            <div class="m" id="M" onclick="openMacros()">M</div>
+                        </div>
+                        <div class="buttons">
+                            <div class="recepients">
+                                <!-- <div class="recepient_options">
+                            <div class="recepient_option" id="send_to_all"
+                                onclick="newRecipient(this.innerHTML, event)">All</div>
+                            <div class="horizontal_divider"></div>
+                            <div class="recepient_option">
+                                <input type="text" placeholder="Type name of recepient" name="recepient_name"
+                                    id="recepient_name" onkeyup="newRecipient(this.value, event)">
+                            </div>
+                                 </div> -->
+                                <!-- <button class="send_button recepient" > <div id="recepient_button">All</div> <i class="fas fa-chevron-down"></i></button> -->
+                                <select name="recepient" id="recepient">
+                                    <option value="All">All</option>
+                                    <option value="Hospital">Hospital</option>
+                                </select>
+                            </div>
+                            <button class="send_button">send </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="vertical_section patient">
+                <i class="fas fa-times" onclick="closeInfo()"></i>
+                <div class="top">
+                    <div class="left">
+                        <div class="patient_basic">
+                            <div class="title">patient details</div>
+                            <div>eric castillo</div>
+                            <div>#00000000</div>
+                            <div>54yo, male</div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="Media/patient.jpg" alt="">
+                        <div class="er">ER</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content_section">
+                        <div class="top">
+                            <div class="title">care plan</div>
+                            <div>Updated 00/00/00 00:00:00</div>
+                        </div>
+                        <div class="horizontal_divider"></div>
+                        <div class="infos">
+                            <div class="info">
+                                <div class="key">
+                                    Imaging study:
+                                </div>
+                                <div class="value">XXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    Special Consult:
+                                </div>
+                                <div class="value">XXXXXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    procedure:
+                                </div>
+                                <div class="value">XXXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    uses:
+                                </div>
+                                <div class="value">XXXXXXXXXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    diet:
+                                </div>
+                                <div class="value">XXXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    activity:
+                                </div>
+                                <div class="value">XXXXXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    special note:
+                                </div>
+                                <div class="value">Eric Castillo was admitted on Mon. 03/30 with severe shortness of
+                                    breath and fever. He tested positive for COVID-19.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_section">
+                        <div class="top">
+                            <div class="title">proxy-provided info</div>
+                        </div>
+                        <div class="horizontal_divider"></div>
+                        <div class="infos">
+                            <div class="info">
+                                <div class="key">
+                                    patient-preferred name:
+                                </div>
+                                <div class="value">eric</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    nickname:
+                                </div>
+                                <div class="value">eric</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    interests:
+                                </div>
+                                <div class="value">baseball, surfing</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    uses:
+                                </div>
+                                <div class="value">XXXXX</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    allergies:
+                                </div>
+                                <div class="value">shrimp</div>
+                            </div>
+                            <div class="info">
+                                <div class="key">
+                                    race:
+                                </div>
+                                <div class="value">latino</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_section">
+                        <div class="top">
+                            <div class="title">proxy-provided info</div>
+                        </div>
+                        <div class="horizontal_divider"></div>
+                        <div class="infos">
+                            <div class="info">
+                                <div class="key">
+                                    closed on:
+                                </div>
+                                <div class="value"><button>details</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script src="js.js"></script>
+</body>
+
+</html>

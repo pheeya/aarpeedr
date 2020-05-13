@@ -1,0 +1,940 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  letter-spacing: 0.1px;
+  word-spacing: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+button,
+.fa,
+.fas,
+.m {
+  cursor: pointer;
+}
+
+body,
+html {
+  min-width: 430px;
+}
+
+.horizontal_divider {
+  border-bottom: 1px solid #e2e4e6;
+  width: 100%;
+}
+
+.send_button {
+  border: 0;
+  padding: 10px;
+  background-color: #e2dddd;
+  color: white;
+  text-transform: capitalize;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+.send_button i {
+  margin-left: 5px;
+}
+
+nav {
+  background-color: #10011b;
+  color: white;
+}
+nav .nav {
+  max-width: 1900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav .logo {
+  width: 150px;
+}
+nav .nav .logo img {
+  width: 100%;
+}
+nav .nav .nav_items {
+  display: flex;
+}
+nav .nav .nav_items .fa-bell {
+  font-size: 35px;
+  margin: 0;
+}
+nav .nav .nav_item {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 5px;
+  text-transform: capitalize;
+}
+nav .nav .vertical_divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 12px;
+}
+nav .nav .vertical_divider::after {
+  content: "";
+  height: 100%;
+  max-width: 1px;
+  border-right: 1px solid white;
+}
+nav .nav .name {
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+}
+nav .nav .name div {
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav .nav .name .img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+}
+nav .nav .name .img img {
+  width: 100%;
+  display: block;
+}
+nav .nav_mobile {
+  background-color: #10011b;
+  padding: 10px;
+  text-align: center;
+  display: none;
+}
+nav .nav_mobile button {
+  text-transform: uppercase;
+  border: 0;
+  background-color: #572c5f;
+  padding: 15px 20px;
+  margin: 20px 5px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 150px;
+}
+
+main .vertical_sections {
+  display: flex;
+}
+main .vertical_sections .vertical_section {
+  max-height: 95vh;
+  overflow-y: scroll;
+}
+main .vertical_sections .inbox {
+  background-color: #341842;
+  color: white;
+  width: 30%;
+  padding-bottom: 100px;
+}
+main .vertical_sections .inbox .horizontal_divider {
+  width: 93%;
+  margin: auto;
+}
+main .vertical_sections .inbox .top {
+  padding: 15px 20px;
+  padding-bottom: 0;
+}
+main .vertical_sections .inbox .top .fa-times {
+  font-size: 35px;
+  margin: 20px 0;
+  display: none;
+}
+main .vertical_sections .inbox .top .search {
+  background-color: white;
+  border-radius: 3px;
+  position: relative;
+  margin: 10px 0;
+}
+main .vertical_sections .inbox .top .search input {
+  border-radius: 3px;
+  border: none;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 12px 10px;
+  width: 100%;
+  transition: border 0.2s;
+}
+main .vertical_sections .inbox .top .search input:focus {
+  outline: none;
+  border: 2px solid #10011b;
+}
+main .vertical_sections .inbox .top .search .fa-search {
+  color: rgba(0, 0, 0, 0.219);
+  font-size: 25px;
+  margin: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: white;
+}
+main .vertical_sections .inbox .top .titles {
+  margin-top: 30px;
+  display: flex;
+  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+main .vertical_sections .inbox .top .titles .title:nth-child(1) {
+  width: 50%;
+}
+main .vertical_sections .inbox .top .titles .title:nth-child(2) {
+  width: 22%;
+}
+main .vertical_sections .inbox .top .titles .title:nth-child(3) {
+  width: 22%;
+}
+main .vertical_sections .inbox .top .titles .title:nth-child(4) {
+  width: 25%;
+  text-align: right;
+}
+main .vertical_sections .inbox .top .titles .far {
+  font-size: 20px;
+  vertical-align: -2px;
+  margin: 0 7px;
+  margin-right: 0;
+}
+main .vertical_sections .inbox .messages .message {
+  font-weight: lighter;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+main .vertical_sections .inbox .messages .message .top {
+  display: flex;
+  padding: 15px 20px;
+}
+main .vertical_sections .inbox .messages .message .top .fa-eye-slash {
+  color: #ffc658;
+}
+main .vertical_sections .inbox .messages .message .top .hidden {
+  visibility: hidden;
+}
+main .vertical_sections .inbox .messages .message .top .alert {
+  color: #ffc658;
+  margin: 0 19px;
+  margin-right: 0;
+  font-size: 20px;
+}
+main .vertical_sections .inbox .messages .message .content {
+  font-size: 14px;
+  margin: 0;
+  padding: 10px 20px;
+}
+main .vertical_sections .inbox .messages .message .content .fa-users {
+  margin-right: 7px;
+}
+main .vertical_sections .inbox .messages .message .item .title {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+main .vertical_sections .inbox .messages .message .item:nth-child(1) {
+  width: 46%;
+}
+main .vertical_sections .inbox .messages .message .item:nth-child(2) {
+  width: 22%;
+}
+main .vertical_sections .inbox .messages .message .item:nth-child(3) {
+  width: 22%;
+}
+main .vertical_sections .inbox .messages .message .fa,
+main .vertical_sections .inbox .messages .message .fas,
+main .vertical_sections .inbox .messages .message .far {
+  color: #7c878e;
+}
+main .vertical_sections .inbox .messages .message .fa-eye {
+  color: white;
+}
+main .vertical_sections .inbox .messages .active_message {
+  background-color: white;
+  box-shadow: 0 0 0px 1px white;
+  position: relative;
+}
+main .vertical_sections .inbox .messages .active_message .title,
+main .vertical_sections .inbox .messages .active_message .content {
+  color: #341842;
+}
+main .vertical_sections .inbox .messages .active_message .fa,
+main .vertical_sections .inbox .messages .active_message .fas,
+main .vertical_sections .inbox .messages .active_message .far {
+  color: #7c878e;
+}
+main .vertical_sections .inbox .messages .active_message:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 8px;
+  background-color: #00b2a9;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 0 0px 1px #00b2a9;
+}
+main .vertical_sections .conversation {
+  background-color: #f6f7f8;
+  width: 40%;
+  padding-bottom: 270px;
+}
+main .vertical_sections .conversation .send_message {
+  background-color: #eeeeee;
+  padding: 20px;
+  padding-bottom: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 40%;
+  margin: auto;
+}
+main .vertical_sections .conversation .send_message .send_options {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .vertical_sections .conversation .send_message .send_options .icons {
+  font-size: 35px;
+  color: #694f72;
+}
+main .vertical_sections .conversation .send_message .send_options .icons i {
+  margin: 0 10px;
+}
+main .vertical_sections .conversation .send_message .send_options .icons .m {
+  margin: 0 10px;
+  display: inline-block;
+  border: 1px solid #694f72;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+  vertical-align: 5px;
+}
+@media (max-width: 525px) {
+  main .vertical_sections .conversation .send_message .send_options .icons {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  main .vertical_sections .conversation .send_message .send_options .icons .m {
+    font-size: 23px;
+    height: 30px;
+    width: 30px;
+    vertical-align: 1px;
+  }
+}
+main .vertical_sections .conversation .send_message input {
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  padding: 15px 10px;
+  font-size: 18px;
+}
+main .vertical_sections .conversation .top {
+  padding: 15px 20px;
+  padding-bottom: 5px;
+}
+main .vertical_sections .conversation .top .title {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+main .vertical_sections .conversation .top .names {
+  display: flex;
+  margin: 10px 0;
+}
+main .vertical_sections .conversation .top .names .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+main .vertical_sections .conversation .top .names .name {
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+main .vertical_sections .conversation .top .names .name:nth-child(1) .circle {
+  background-color: #00b2a9;
+}
+main .vertical_sections .conversation .top .names .name:nth-child(2) .circle {
+  background-color: #ceb888;
+}
+main .vertical_sections .conversation .top .names .name:nth-child(3) .circle {
+  background-color: #5e3465;
+}
+main .vertical_sections .conversation .texts {
+  padding: 15px 20px;
+  padding-top: 0;
+}
+main .vertical_sections .conversation .texts .text {
+  margin: 20px 0;
+  padding: 0 20px;
+  max-width: 500px;
+}
+main .vertical_sections .conversation .texts .text .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+main .vertical_sections .conversation .texts .text .top {
+  padding: 0;
+  margin: 10px 0;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #abb4be;
+  font-weight: 700;
+}
+main .vertical_sections .conversation .texts .text .content {
+  background-color: #c5eae8;
+  padding: 15px 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+main .vertical_sections .conversation .texts .text .bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+main .vertical_sections .conversation .texts .text .bottom .seen {
+  margin: 5px 0;
+  color: #abb4be;
+  font-size: 12px;
+}
+main .vertical_sections .conversation .texts .text .bottom .seen .fa-eye {
+  color: #38aa6b;
+}
+main .vertical_sections .conversation .texts .text .bottom .not_seen {
+  margin-left: 10px;
+}
+main .vertical_sections .conversation .texts .my_text {
+  max-width: 100%;
+  cursor: pointer;
+}
+main .vertical_sections .conversation .texts .my_text .content {
+  max-width: 500px;
+  margin: auto;
+  margin-right: 0;
+}
+main .vertical_sections .conversation .texts .my_text .content img {
+  margin: 10px auto;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+main .vertical_sections .conversation .texts .my_text .top {
+  margin-left: auto;
+  margin-right: 0;
+  max-width: 500px;
+}
+main .vertical_sections .conversation .texts .text:nth-child(1) .circle {
+  background-color: #00b2a9;
+}
+main .vertical_sections .conversation .texts .text:nth-child(2) .circle {
+  background-color: #ceb888;
+}
+main .vertical_sections .conversation .texts .text:nth-child(2) .content {
+  background-color: #eeebe1;
+}
+main .vertical_sections .conversation .texts .text:nth-child(3) .circle,
+main .vertical_sections .conversation .texts .text:nth-child(5) .circle {
+  background-color: #5e3465;
+}
+main .vertical_sections .conversation .texts .text:nth-child(3) .content,
+main .vertical_sections .conversation .texts .text:nth-child(5) .content {
+  background-color: #d6cfd9;
+}
+main .vertical_sections .conversation .texts .text:nth-child(4) .circle {
+  background-color: #acabab;
+}
+main .vertical_sections .conversation .texts .text:nth-child(4) .content {
+  background-color: #e9e9e9;
+}
+main .vertical_sections .conversation .buttons {
+  display: flex;
+}
+main .vertical_sections .conversation .buttons button {
+  margin: 0 5px;
+}
+main .vertical_sections .conversation .recepients {
+  position: relative;
+}
+main .vertical_sections .conversation .recepients select {
+  padding: 15px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+main .vertical_sections .conversation .recepients option {
+  padding: 10px 5px;
+  cursor: pointer;
+}
+main .vertical_sections .conversation .recepients select:focus {
+  outline: none;
+  box-shadow: 0 0 2px 3px #a24ace6c;
+}
+main .vertical_sections .conversation .recepients .fas {
+  transition: transform 0.2s;
+}
+main .vertical_sections .conversation .recepients .recepient {
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(179, 176, 180, 0.815);
+  transition: box-shadow 0.2s;
+  padding: 15px 25px;
+  display: flex;
+}
+main .vertical_sections .conversation .recepients .recepient .fas {
+  margin-left: 5px;
+  color: #646464;
+  height: 100%;
+  position: relative;
+  top: 2px;
+}
+@media (max-width: 525px) {
+  main .vertical_sections .conversation .recepients .recepient #recepient_button {
+    max-width: 20px;
+    overflow: hidden;
+  }
+}
+main .vertical_sections .conversation .recepients .recepient_options {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(15px);
+  position: absolute;
+  left: -95%;
+  top: -295%;
+  background-color: white;
+  border: 1px solid rgba(192, 192, 192, 0.719);
+  box-shadow: 0 0 15px rgba(139, 139, 139, 0.322);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+main .vertical_sections .conversation .recepients .recepient_options .recepient_option {
+  width: 220px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+main .vertical_sections .conversation .recepients .recepient_options .recepient_option input {
+  font-size: 14px;
+  width: 100%;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.384);
+  border-radius: 0;
+  transition: border 0.2s;
+  height: 100%;
+  transition: background-color 0.2s;
+}
+main .vertical_sections .conversation .recepients .recepient_options .recepient_option input:focus {
+  outline: none;
+  border-bottom: 1px solid black;
+  background-color: rgba(207, 205, 207, 0.259);
+}
+main .vertical_sections .conversation .recepients .recepient_options .recepient_option:nth-child(1) {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+main .vertical_sections .conversation .recepients .recepient_options .recepient_option:nth-child(1):hover {
+  background-color: rgba(87, 44, 95, 0.259);
+}
+main .vertical_sections .conversation .recepients:hover button {
+  box-shadow: 0 0 2px 3px rgba(183, 104, 197, 0.459);
+}
+main .vertical_sections .conversation .recepients:hover .recepient_options {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+main .vertical_sections .conversation .recepients:hover .fas {
+  transform: rotate(180deg);
+}
+main .vertical_sections .conversation .message_popups {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  background-color: #3126334f;
+  transition: all 0.2s;
+  opacity: 0;
+  pointer-events: none;
+}
+main .vertical_sections .conversation .message_popups .macros_popup {
+  max-width: 600px;
+  width: 95%;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top {
+  background-color: #572c5f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 12px;
+  font-weight: lighter;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search {
+  width: 70%;
+  margin: 0 5px;
+  padding: 0;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search input {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(192, 192, 192, 0.733);
+  transition: border 0.2s;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search input:focus {
+  outline: none;
+  border: 1px solid #341842;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top .macros_popup_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+}
+@media (max-width: 565px) {
+  main .vertical_sections .conversation .message_popups .macros_popup .macros_top .macros_popup_title {
+    font-size: 16px;
+  }
+  main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search {
+    width: 60%;
+  }
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top div i {
+  font-size: 30px;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body {
+  padding: 10px;
+  background-color: white;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body .bottom_table_holder {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body .bottom_table_holder table th {
+  margin: 0;
+  padding: 0;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body .bottom_table_holder::-webkit-scrollbar {
+  width: 0 !important;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body .tables_holder {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(92, 92, 92, 0.63);
+  overflow: hidden;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body table,
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body th,
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body td {
+  font-size: 14px;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body td,
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body th {
+  font-weight: lighter;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body th:nth-child(1) {
+  border-right: 1px solid rgba(192, 192, 192, 0.658);
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body td:nth-child(1),
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body th:nth-child(1) {
+  background-color: #734d7b;
+  color: white;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body td {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body td:hover {
+  background-color: rgba(87, 44, 95, 0.259);
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body .divider_holder:hover {
+  background-color: #643a6de7;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body .divider_holder:nth-child(2):hover {
+  background-color: #ffffff;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body table:nth-child(1) th {
+  font-size: 16px;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body table {
+  border-collapse: collapse;
+  border-style: hidden;
+  overflow: hidden;
+  width: 100%;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body table th:nth-child(1) {
+  width: 40%;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body table th,
+main .vertical_sections .conversation .message_popups .macros_popup .macros_body table td {
+  padding: 10px;
+  text-align: left;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom {
+  padding: 10px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down {
+  text-align: left;
+  font-size: 14px;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .selected {
+  background-color: #5c4280;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: white;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .selected i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options {
+  transform: scaleY(0);
+  position: relative;
+  transition: transform 0.2s;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options .options_inner {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  max-height: 235px;
+  overflow-y: scroll;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options .options_inner .option {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 1px 0;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .drop_down .options .options_inner .option:hover {
+  background-color: #5c4280;
+  color: white;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder {
+  text-align: left;
+  padding: 15px 0;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder button {
+  background-color: #572c5f;
+}
+main .vertical_sections .conversation .message_popups .message_popup {
+  max-width: 600px;
+  width: 90vw;
+  margin: auto;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0);
+}
+main .vertical_sections .conversation .message_popups .message_popup img {
+  width: 100%;
+  display: block;
+}
+main .vertical_sections .conversation .message_popups .message_popup .message_popup_top {
+  background-color: #572c5f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 12px;
+  font-weight: lighter;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+main .vertical_sections .conversation .message_popups .message_popup .message_popup_top .message_popup_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+}
+main .vertical_sections .conversation .message_popups .message_popup .message_popup_top i {
+  font-size: 30px;
+}
+main .vertical_sections .conversation .message_popups .message_popup .message_popup_bottom {
+  color: #572c5f;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  font-size: 18px;
+  padding: 12px;
+  font-weight: lighter;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+main .vertical_sections .conversation .message_popups .message_popup .take_picture {
+  text-transform: capitalize;
+  border: 0;
+  background-color: #572c5f;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+main .vertical_sections .conversation .message_popups .message_popup .message_popup_body {
+  padding: 12px;
+  background-color: white;
+}
+main .vertical_sections .patient {
+  width: 30%;
+  background-color: #fefefe;
+  padding: 20px 15px;
+  padding-bottom: 100px;
+}
+main .vertical_sections .patient .fa-times {
+  font-size: 35px;
+  margin: 20px 0;
+  display: none;
+}
+main .vertical_sections .patient .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 14px;
+}
+main .vertical_sections .patient .top .title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+main .vertical_sections .patient .top .left .patient_basic .title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 15px 0;
+}
+main .vertical_sections .patient .top .left .patient_basic div {
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 2px 0;
+}
+main .vertical_sections .patient .top .right img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+main .vertical_sections .patient .top .right .er {
+  background-color: #00b2a9;
+  color: #ebebeb;
+  padding: 8px;
+  font-size: 14px;
+  text-align: center;
+  width: 70px;
+  border-radius: 5px;
+  margin: 8px auto;
+}
+main .vertical_sections .patient .content .infos {
+  padding: 10px 0;
+  font-size: 14px;
+}
+main .vertical_sections .patient .content .infos .info {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  color: #424446;
+  padding: 5px 0;
+}
+main .vertical_sections .patient .content .infos .info .value {
+  font-weight: bold;
+  max-width: 250px;
+  text-align: right;
+}
+main .vertical_sections .patient .content .infos .info .value button {
+  text-transform: capitalize;
+  border: 0;
+  background-color: #572c5f;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (max-width: 1255px) {
+  nav .nav_mobile {
+    display: block;
+  }
+  nav .nav .logo {
+    width: 120px;
+  }
+
+  main .vertical_sections .inbox {
+    position: fixed;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    padding-bottom: 400px;
+  }
+  main .vertical_sections .inbox .top .fa-times {
+    display: block;
+  }
+  main .vertical_sections .conversation {
+    width: 100%;
+  }
+  main .vertical_sections .conversation .send_message {
+    width: 100%;
+  }
+  main .vertical_sections .patient {
+    padding-bottom: 400px;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s;
+  }
+  main .vertical_sections .patient .fa-times {
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  main .vertical_sections .conversation .top .title {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  main .vertical_sections .conversation .top .names .name {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=css.css.map */
