@@ -344,6 +344,14 @@ main {
                                 padding: 10px;
                                 cursor: pointer;
                                 transition: all 0.2s;
+                                display:flex;
+                                justify-content: space-between;
+                                .fas{
+                                    color:rgba(255, 255, 255, 0);
+                                }
+                                .fas_active{
+                                    color:white;
+                                }
                             }
                             .option:nth-child(1){
                                 border-bottom:1px solid rgba(192, 192, 192, 0.356);
@@ -352,6 +360,7 @@ main {
                                 background-color: #5c4280;
                                 color: white;
                             }
+                           
                             .option:hover {
                                 background-color: #5c4280;
                                 color: white;
@@ -622,6 +631,7 @@ main {
                         font-size: 14px;
                         cursor: pointer;
                         transition: background-color 0.2s;
+                      
                         input {
                             font-size: 14px;
                             width: 100%;
@@ -655,7 +665,7 @@ main {
                     visibility: visible;
                     opacity: 1;
                 }
-                .fas {
+                .fa-chevron-down {
                     transform: rotate(180deg);
                 }
             }

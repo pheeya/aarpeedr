@@ -120,15 +120,19 @@ selected.onclick = function () {
 
 for (let i = 0; i < options_list.length; i++) {
     options_list[i].onclick = function () {
-        if (!selected_list.includes(this.innerHTML)) {
-            selected_list.push(this.innerHTML);
-            this.classList.add("selected_option")
+        var value =options_list[i].getElementsByClassName("value")[0];
+        var tick = options_list[i].getElementsByClassName("fa-check")[0];
+        if (!selected_list.includes(value.innerHTML)) {
+            selected_list.push(value.innerHTML);
+            tick.classList.add("fas_active")
+            this.classList.add("selected_option");
         }
         else {
-            var index = selected_list.indexOf(this.innerHTML);
+            var index = selected_list.indexOf(value.innerHTML);
             selected_list.splice(index, 1);
-            this.classList.remove("selected_option")
-
+            tick.classList.remove("fas_active")
+            this.classList.remove("selected_option");
+            
         }
         if (selected_list.includes("All") || selected_list.length === options_list.length - 1) {
             document.getElementById("number_of_selected").innerHTML = "All";
@@ -136,6 +140,7 @@ for (let i = 0; i < options_list.length; i++) {
         else {
             document.getElementById("number_of_selected").innerHTML = selected_list.length;
         }
+    console.log(selected_list)
     }
 }
 

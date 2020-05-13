@@ -347,6 +347,14 @@ main .vertical_sections .conversation .send_message .drop_down .options .options
   padding: 10px;
   cursor: pointer;
   transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option .fas {
+  color: rgba(255, 255, 255, 0);
+}
+main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option .fas_active {
+  color: white;
 }
 main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option:nth-child(1) {
   border-bottom: 1px solid rgba(192, 192, 192, 0.356);
@@ -634,7 +642,7 @@ main .vertical_sections .conversation .recepients:hover .recepient_options {
   visibility: visible;
   opacity: 1;
 }
-main .vertical_sections .conversation .recepients:hover .fas {
+main .vertical_sections .conversation .recepients:hover .fa-chevron-down {
   transform: rotate(180deg);
 }
 main .vertical_sections .conversation .message_popups {
