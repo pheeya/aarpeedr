@@ -36,7 +36,7 @@ html {
   background-color: #e2dddd;
   color: white;
   text-transform: capitalize;
-  padding: 15px 20px;
+  padding: 12px 20px;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -302,14 +302,26 @@ main .vertical_sections .conversation .send_message {
   width: 40%;
   margin: auto;
 }
+main .vertical_sections .conversation .send_message .message_box {
+  position: relative;
+}
+main .vertical_sections .conversation .send_message .message_box img {
+  width: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 10px;
+  cursor: pointer;
+}
 main .vertical_sections .conversation .send_message .drop_down {
   text-align: left;
   font-size: 14px;
 }
 main .vertical_sections .conversation .send_message .drop_down .selected {
-  background-color: white;
-  border: 1px solid rgba(192, 192, 192, 0.438);
-  padding: 15px;
+  background-color: #572C5F;
+  color: white;
+  padding: 12px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -360,11 +372,11 @@ main .vertical_sections .conversation .send_message .drop_down .options .options
   border-bottom: 1px solid rgba(192, 192, 192, 0.356);
 }
 main .vertical_sections .conversation .send_message .drop_down .options .options_inner .selected_option {
-  background-color: #5c4280;
+  background-color: #572C5F;
   color: white;
 }
 main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option:hover {
-  background-color: #5c4280;
+  background-color: #572C5F;
   color: white;
 }
 main .vertical_sections .conversation .send_message .send_options {
@@ -410,7 +422,13 @@ main .vertical_sections .conversation .send_message input {
   border: 0;
   border-radius: 3px;
   padding: 15px 10px;
-  font-size: 18px;
+  font-size: 14px;
+  border: 1px solid #a24ace00;
+  transition: border 0.2s;
+}
+main .vertical_sections .conversation .send_message input:focus {
+  border: 1px solid #a24ace6c;
+  outline: none;
 }
 main .vertical_sections .conversation .top {
   padding: 15px 20px;
@@ -849,7 +867,7 @@ main .vertical_sections .conversation .message_popups .message_popup .take_pictu
   text-transform: capitalize;
   border: 0;
   background-color: #572c5f;
-  padding: 15px 20px;
+  padding: 12px 20px;
   color: white;
   border-radius: 3px;
   cursor: pointer;
