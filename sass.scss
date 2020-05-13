@@ -206,7 +206,7 @@ main {
                     font-weight: lighter;
                     text-transform: capitalize;
                     cursor: pointer;
-                    padding:10px 0;
+                    padding: 10px 0;
                     .top {
                         display: flex;
                         padding: 15px 20px;
@@ -299,15 +299,15 @@ main {
                 left: 0;
                 width: 40%;
                 margin: auto;
-                .message_box{
+                .message_box {
                     position: relative;
-                    img{
-                        width:35px;
+                    img {
+                        width: 35px;
                         position: absolute;
-                        right:0;
-                        top:0;
-                        bottom:0;
-                        margin:auto 10px;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 10px;
                         cursor: pointer;
                     }
                 }
@@ -315,14 +315,14 @@ main {
                     text-align: left;
                     font-size: 14px;
                     .selected {
-                        background-color: #572C5F;
+                        background-color: #572c5f;
                         color: white;
                         padding: 12px;
                         border-radius: 5px;
                         display: flex;
                         justify-content: space-between;
                         cursor: pointer;
-                        transition: box-shadow .2s;
+                        transition: box-shadow 0.2s;
                         i {
                             display: flex;
                             flex-direction: column;
@@ -331,19 +331,19 @@ main {
                             transition: transform 0.2s;
                         }
                     }
-                    .focused{
-                        box-shadow:0 0 2px 5px #9063ceb9;
+                    .focused {
+                        box-shadow: 0 0 2px 5px #9063ceb9;
                     }
                     .options {
                         visibility: hidden;
-                        opacity:0;
+                        opacity: 0;
                         top: 10px;
                         position: relative;
                         transition: all 0.2s;
-                       
+
                         .options_inner {
-                        margin-bottom:5px;
-                        border-radius: 5px;
+                            margin-bottom: 5px;
+                            border-radius: 5px;
                             position: absolute;
                             background-color: white;
                             width: 100%;
@@ -354,26 +354,26 @@ main {
                                 padding: 10px;
                                 cursor: pointer;
                                 transition: all 0.2s;
-                                display:flex;
+                                display: flex;
                                 justify-content: space-between;
-                                .fas{
-                                    color:rgba(255, 255, 255, 0);
+                                .fas {
+                                    color: rgba(255, 255, 255, 0);
                                 }
-                                .fas_active{
-                                    color:white;
+                                .fas_active {
+                                    color: white;
                                 }
                             }
-                            .option:nth-child(1){
-                                border-bottom:1px solid rgba(192, 192, 192, 0.356);
+                            .option:nth-child(1) {
+                                border-bottom: 1px solid rgba(192, 192, 192, 0.356);
                             }
                             .selected_option {
-                        background-color: #572C5F;
-                        color: white;
+                                background-color: #572c5f;
+                                color: white;
                             }
-                           
+
                             .option:hover {
-                        background-color: #572C5F;
-                        color: white;
+                                background-color: #572c5f;
+                                color: white;
                             }
                         }
                     }
@@ -401,19 +401,19 @@ main {
                             vertical-align: 5px;
                         }
                     }
-                
                 }
-                @media(max-width:635px){
-                    .send_options{
-                        display:block;
-                        .icons{
-                            width:100%;
+                @media (max-width: 635px) {
+                    .send_options {
+                        display: block;
+                        .icons {
+                            width: 100%;
                             max-width: 420px;
-                            margin:auto;
-                            display:flex;
-                            margin-bottom:20px;
-                            i,.m{
-                                margin:auto;
+                            margin: auto;
+                            display: flex;
+                            margin-bottom: 20px;
+                            i,
+                            .m {
+                                margin: auto;
                             }
                         }
                     }
@@ -424,13 +424,12 @@ main {
                     border-radius: 3px;
                     padding: 15px 10px;
                     font-size: 14px;
-                    border:1px solid #a24ace00;
-                    transition: border .2s;
+                    border: 1px solid #a24ace00;
+                    transition: border 0.2s;
                 }
-                input:focus{
-                   
-                    border:1px solid #a24ace6c;
-                    outline:none;
+                input:focus {
+                    border: 1px solid #a24ace6c;
+                    outline: none;
                 }
             }
             .top {
@@ -576,12 +575,12 @@ main {
                     margin: 0 5px;
                 }
             }
-            @media(max-width:635px){
-              .buttons{
-                width:100%;
-                max-width: 420px;
-                margin:10px auto;
-              }
+            @media (max-width: 635px) {
+                .buttons {
+                    width: 100%;
+                    max-width: 420px;
+                    margin: 10px auto;
+                }
             }
             .recepients {
                 position: relative;
@@ -648,7 +647,7 @@ main {
                         font-size: 14px;
                         cursor: pointer;
                         transition: background-color 0.2s;
-                      
+
                         input {
                             font-size: 14px;
                             width: 100%;
@@ -722,6 +721,7 @@ main {
                             width: 70%;
                             margin: 0 5px;
                             padding: 0;
+                            position: relative;
                             input {
                                 width: 100%;
                                 padding: 10px;
@@ -729,6 +729,13 @@ main {
                                 border-radius: 3px;
                                 border: 1px solid rgba(192, 192, 192, 0.733);
                                 transition: border 0.2s;
+                            }
+                            img {
+                                width: 30px;
+                                position: absolute;
+                                right: 5px;
+                                background-color: white;
+                                cursor: pointer;
                             }
                             input:focus {
                                 outline: none;
@@ -761,6 +768,9 @@ main {
                     .macros_body {
                         padding: 10px;
                         background-color: white;
+                        padding-bottom: 15px;
+                        border-bottom-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
                         .bottom_table_holder {
                             max-height: 400px;
                             overflow-y: scroll;
@@ -848,9 +858,9 @@ main {
                             text-align: left;
                             button {
                                 background-color: white;
-                                padding:5px;
-                                img{
-                                    width:35px;
+                                padding: 5px;
+                                img {
+                                    width: 35px;
                                 }
                             }
                         }

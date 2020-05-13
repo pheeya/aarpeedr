@@ -319,7 +319,7 @@ main .vertical_sections .conversation .send_message .drop_down {
   font-size: 14px;
 }
 main .vertical_sections .conversation .send_message .drop_down .selected {
-  background-color: #572C5F;
+  background-color: #572c5f;
   color: white;
   padding: 12px;
   border-radius: 5px;
@@ -372,11 +372,11 @@ main .vertical_sections .conversation .send_message .drop_down .options .options
   border-bottom: 1px solid rgba(192, 192, 192, 0.356);
 }
 main .vertical_sections .conversation .send_message .drop_down .options .options_inner .selected_option {
-  background-color: #572C5F;
+  background-color: #572c5f;
   color: white;
 }
 main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option:hover {
-  background-color: #572C5F;
+  background-color: #572c5f;
   color: white;
 }
 main .vertical_sections .conversation .send_message .send_options {
@@ -413,7 +413,8 @@ main .vertical_sections .conversation .send_message .send_options .icons .m {
     display: flex;
     margin-bottom: 20px;
   }
-  main .vertical_sections .conversation .send_message .send_options .icons i, main .vertical_sections .conversation .send_message .send_options .icons .m {
+  main .vertical_sections .conversation .send_message .send_options .icons i,
+main .vertical_sections .conversation .send_message .send_options .icons .m {
     margin: auto;
   }
 }
@@ -702,6 +703,7 @@ main .vertical_sections .conversation .message_popups .macros_popup .macros_top 
   width: 70%;
   margin: 0 5px;
   padding: 0;
+  position: relative;
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search input {
   width: 100%;
@@ -710,6 +712,13 @@ main .vertical_sections .conversation .message_popups .macros_popup .macros_top 
   border-radius: 3px;
   border: 1px solid rgba(192, 192, 192, 0.733);
   transition: border 0.2s;
+}
+main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search img {
+  width: 30px;
+  position: absolute;
+  right: 5px;
+  background-color: white;
+  cursor: pointer;
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_top .search input:focus {
   outline: none;
@@ -740,6 +749,9 @@ main .vertical_sections .conversation .message_popups .macros_popup .macros_top 
 main .vertical_sections .conversation .message_popups .macros_popup .macros_body {
   padding: 10px;
   background-color: white;
+  padding-bottom: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_body .bottom_table_holder {
   max-height: 400px;
