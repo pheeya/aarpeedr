@@ -817,9 +817,10 @@ main .vertical_sections .conversation .message_popups .macros_popup .macros_bott
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder button {
   background-color: white;
+  padding: 5px;
 }
 main .vertical_sections .conversation .message_popups .macros_popup .macros_bottom .button_holder button img {
-  width: 34px;
+  width: 35px;
 }
 main .vertical_sections .conversation .message_popups .message_popup {
   max-width: 600px;
