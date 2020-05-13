@@ -347,7 +347,6 @@ main .vertical_sections .conversation .send_message .drop_down .options .options
   padding: 10px;
   cursor: pointer;
   transition: all 0.2s;
-  margin: 1px 0;
 }
 main .vertical_sections .conversation .send_message .drop_down .options .options_inner .option:nth-child(1) {
   border-bottom: 1px solid rgba(192, 192, 192, 0.356);

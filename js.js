@@ -123,7 +123,6 @@ for (let i = 0; i < options_list.length; i++) {
         if (!selected_list.includes(this.innerHTML)) {
             selected_list.push(this.innerHTML);
             this.classList.add("selected_option")
-            console.log(selected_list)
         }
         else {
             var index = selected_list.indexOf(this.innerHTML);
@@ -131,7 +130,12 @@ for (let i = 0; i < options_list.length; i++) {
             this.classList.remove("selected_option")
 
         }
-        document.getElementById("number_of_selected").innerHTML = selected_list.length;
+        if (selected_list.includes("All") || selected_list.length === options_list.length - 1) {
+            document.getElementById("number_of_selected").innerHTML = "All";
+        }
+        else {
+            document.getElementById("number_of_selected").innerHTML = selected_list.length;
+        }
     }
 }
 
@@ -173,7 +177,7 @@ function newRecipient(rec, event) {
         r_button.innerHTML = recepient;
 
     }
-    else{
+    else {
         all = true;
         recepient = "All";
         r_button.innerHTML = recepient;
